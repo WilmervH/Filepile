@@ -9,6 +9,7 @@
 
 ## Features
 - short term storage for quickly sharing files
+- expiring files that are _actually_ deleted (default 10min)
 - easy-to-share links
 - usable from a cli
 
@@ -63,7 +64,7 @@ I am cautious of relying on random seemingly good-willing file hosts on the inte
 
 ## Installation
 - Clone the repo
-- run `npm production` in the `/src` folder
+- run `npm run production` in the `/src` folder
 
 ## Development
 Feel free to contribute. Use `npm start` for the development server.
