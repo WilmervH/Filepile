@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+
+# Node
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Runtime data
+src/uploads/
+src/fileinfo.db
+*.db
+*.db-journal
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env
+.env
+.env.local
+.env.*.local
