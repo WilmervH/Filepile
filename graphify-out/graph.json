@@ -1,0 +1,1609 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "upload_flow",
+        "label": "File upload flow",
+        "nodes": [
+          "src_index_upload_handler",
+          "src_files_generatefileid",
+          "src_files_storage",
+          "src_sql_execute",
+          "src_sql_files_table",
+          "src_index_cleanup"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "src/index.js"
+      },
+      {
+        "id": "statistics_tracking",
+        "label": "Statistics tracking pattern",
+        "nodes": [
+          "src_index_upload_handler",
+          "src_index_download_handler",
+          "src_index_statistics_handler",
+          "src_sql_statistics_table"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "src/index.js"
+      },
+      {
+        "id": "expiry_mechanism",
+        "label": "In-memory expiry mechanism",
+        "nodes": [
+          "src_index_upload_handler",
+          "src_index_cleanup",
+          "claude_file_expiry_caveat"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "CLAUDE.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "files.js",
+      "file_type": "code",
+      "source_file": "src/files.js",
+      "source_location": "L1",
+      "id": "src_files",
+      "community": 1,
+      "norm_label": "files.js"
+    },
+    {
+      "label": "storage",
+      "file_type": "code",
+      "source_file": "src/files.js",
+      "source_location": "L3",
+      "id": "src_files_storage",
+      "community": 1,
+      "norm_label": "storage"
+    },
+    {
+      "label": "fileLimits",
+      "file_type": "code",
+      "source_file": "src/files.js",
+      "source_location": "L12",
+      "id": "src_files_filelimits",
+      "community": 1,
+      "norm_label": "filelimits"
+    },
+    {
+      "label": "generateFileId()",
+      "file_type": "code",
+      "source_file": "src/files.js",
+      "source_location": "L16",
+      "id": "src_files_generatefileid",
+      "community": 1,
+      "norm_label": "generatefileid()"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "L1",
+      "id": "src_index",
+      "community": 1,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "app",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "L10",
+      "id": "src_index_app",
+      "community": 1,
+      "norm_label": "app"
+    },
+    {
+      "label": "upload",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "L12",
+      "id": "src_index_upload",
+      "community": 1,
+      "norm_label": "upload"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "L15",
+      "id": "src_index_db",
+      "community": 1,
+      "norm_label": "db"
+    },
+    {
+      "label": "cleanup()",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "L142",
+      "id": "src_index_cleanup",
+      "community": 3,
+      "norm_label": "cleanup()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L1",
+      "id": "src_package",
+      "community": 2,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L2",
+      "id": "src_package_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L3",
+      "id": "src_package_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L4",
+      "id": "src_package_type",
+      "community": 2,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L5",
+      "id": "src_package_main",
+      "community": 2,
+      "norm_label": "main"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L6",
+      "id": "src_package_scripts",
+      "community": 2,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L7",
+      "id": "src_package_scripts_start",
+      "community": 2,
+      "norm_label": "start"
+    },
+    {
+      "label": "production",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L8",
+      "id": "src_package_scripts_production",
+      "community": 2,
+      "norm_label": "production"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L10",
+      "id": "src_package_author",
+      "community": 2,
+      "norm_label": "author"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L11",
+      "id": "src_package_license",
+      "community": 2,
+      "norm_label": "license"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L12",
+      "id": "src_package_description",
+      "community": 2,
+      "norm_label": "description"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L13",
+      "id": "src_package_dependencies",
+      "community": 6,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L14",
+      "id": "src_package_dependencies_express",
+      "community": 6,
+      "norm_label": "express"
+    },
+    {
+      "label": "multer",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L15",
+      "id": "src_package_dependencies_multer",
+      "community": 6,
+      "norm_label": "multer"
+    },
+    {
+      "label": "nodemon",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L16",
+      "id": "src_package_dependencies_nodemon",
+      "community": 6,
+      "norm_label": "nodemon"
+    },
+    {
+      "label": "sqlite3",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "L17",
+      "id": "src_package_dependencies_sqlite3",
+      "community": 6,
+      "norm_label": "sqlite3"
+    },
+    {
+      "label": "sql.js",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "L1",
+      "id": "src_sql",
+      "community": 4,
+      "norm_label": "sql.js"
+    },
+    {
+      "label": "execute()",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "L3",
+      "id": "src_sql_execute",
+      "community": 3,
+      "norm_label": "execute()"
+    },
+    {
+      "label": "fetchAll()",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "L20",
+      "id": "src_sql_fetchall",
+      "community": 5,
+      "norm_label": "fetchall()"
+    },
+    {
+      "label": "fetchFirst()",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "L29",
+      "id": "src_sql_fetchfirst",
+      "community": 4,
+      "norm_label": "fetchfirst()"
+    },
+    {
+      "label": "updateStatistics()",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "L38",
+      "id": "src_sql_updatestatistics",
+      "community": 4,
+      "norm_label": "updatestatistics()"
+    },
+    {
+      "label": "initDb()",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "L45",
+      "id": "src_sql_initdb",
+      "community": 1,
+      "norm_label": "initdb()"
+    },
+    {
+      "label": "POST /upload handler",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:21-54",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_index_upload_handler",
+      "community": 3,
+      "norm_label": "post /upload handler"
+    },
+    {
+      "label": "GET /download/:fileId handler",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:60-87",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_index_download_handler",
+      "community": 5,
+      "norm_label": "get /download/:fileid handler"
+    },
+    {
+      "label": "GET /info/:fileId handler",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:93-116",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_index_info_handler",
+      "community": 4,
+      "norm_label": "get /info/:fileid handler"
+    },
+    {
+      "label": "GET /statistics handler",
+      "file_type": "code",
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:122-136",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_index_statistics_handler",
+      "community": 5,
+      "norm_label": "get /statistics handler"
+    },
+    {
+      "label": "files table schema",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "src/sql.js:48-55",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_sql_files_table",
+      "community": 3,
+      "norm_label": "files table schema"
+    },
+    {
+      "label": "statistics table schema",
+      "file_type": "code",
+      "source_file": "src/sql.js",
+      "source_location": "src/sql.js:57-61",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "src_sql_statistics_table",
+      "community": 5,
+      "norm_label": "statistics table schema"
+    },
+    {
+      "label": "filepile npm package manifest",
+      "file_type": "code",
+      "source_file": "src/package.json",
+      "source_location": "src/package.json:1-19",
+      "source_url": null,
+      "captured_at": null,
+      "author": "WilmervH",
+      "contributor": null,
+      "id": "src_package_filepile",
+      "community": 7,
+      "norm_label": "filepile npm package manifest"
+    },
+    {
+      "label": "FilePile Architecture overview",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:16-23",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_filepile_architecture",
+      "community": 1,
+      "norm_label": "filepile architecture overview"
+    },
+    {
+      "label": "In-memory setTimeout expiry caveat",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:24-26",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_file_expiry_caveat",
+      "community": 3,
+      "norm_label": "in-memory settimeout expiry caveat"
+    },
+    {
+      "label": "Two DB connections at startup",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:28-30",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_two_db_connections",
+      "community": 1,
+      "norm_label": "two db connections at startup"
+    },
+    {
+      "label": "Statistics quirks (dead code, bad date)",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:32-36",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_statistics_quirks",
+      "community": 4,
+      "norm_label": "statistics quirks (dead code, bad date)"
+    },
+    {
+      "label": "FilePile project README",
+      "file_type": "document",
+      "source_file": "readme.md",
+      "source_location": "readme.md:1-70",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_filepile",
+      "community": 7,
+      "norm_label": "filepile project readme"
+    },
+    {
+      "label": "FilePile features (expiring, CLI-friendly, short-term storage)",
+      "file_type": "concept",
+      "source_file": "readme.md",
+      "source_location": "readme.md:10-15",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_features",
+      "community": 3,
+      "norm_label": "filepile features (expiring, cli-friendly, short-term storage)"
+    },
+    {
+      "label": "Inspiration (privacy, CLI usability)",
+      "file_type": "rationale",
+      "source_file": "readme.md",
+      "source_location": "readme.md:62-63",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_inspiration",
+      "community": 7,
+      "norm_label": "inspiration (privacy, cli usability)"
+    },
+    {
+      "label": "API endpoints documentation",
+      "file_type": "document",
+      "source_file": "readme.md",
+      "source_location": "readme.md:44-60",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_endpoints",
+      "community": 5,
+      "norm_label": "api endpoints documentation"
+    },
+    {
+      "label": "Filepile Logo Image",
+      "file_type": "image",
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_logo",
+      "community": 0,
+      "norm_label": "filepile logo image"
+    },
+    {
+      "label": "Stacked Colorful Books Illustration",
+      "file_type": "image",
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_stacked_books",
+      "community": 0,
+      "norm_label": "stacked colorful books illustration"
+    },
+    {
+      "label": "Gold Star Motif on Orange Book",
+      "file_type": "image",
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_star_motif",
+      "community": 0,
+      "norm_label": "gold star motif on orange book"
+    },
+    {
+      "label": "Pile Metaphor",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_concept_pile",
+      "community": 0,
+      "norm_label": "pile metaphor"
+    },
+    {
+      "label": "File Organization",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_concept_organization",
+      "community": 0,
+      "norm_label": "file organization"
+    },
+    {
+      "label": "Cartoon Illustration Style",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_cartoon_style",
+      "community": 0,
+      "norm_label": "cartoon illustration style"
+    },
+    {
+      "label": "Multi-color Palette (purple, red, blue, pink, orange, teal)",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_color_palette",
+      "community": 0,
+      "norm_label": "multi-color palette (purple, red, blue, pink, orange, teal)"
+    },
+    {
+      "label": "Stack of Colorful Books",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_stack_of_books",
+      "community": 0,
+      "norm_label": "stack of colorful books"
+    },
+    {
+      "label": "Yellow Star Marker on Book",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_star_marker",
+      "community": 0,
+      "norm_label": "yellow star marker on book"
+    },
+    {
+      "label": "Filepile Brand Identity",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_brand_identity",
+      "community": 0,
+      "norm_label": "filepile brand identity"
+    },
+    {
+      "label": "File Organization Metaphor",
+      "file_type": "concept",
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "assets_filepile_file_organization_metaphor",
+      "community": 0,
+      "norm_label": "file organization metaphor"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/files.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_files",
+      "target": "src_files_filelimits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/files.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_files",
+      "target": "src_files_generatefileid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/files.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_files",
+      "target": "src_files_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:21",
+      "weight": 1.0,
+      "source": "claude_filepile_architecture",
+      "target": "src_files_storage"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_files_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:12",
+      "weight": 1.0,
+      "source": "src_index_upload_handler",
+      "target": "src_files_storage"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_files_filelimits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:12",
+      "weight": 1.0,
+      "source": "src_index_upload_handler",
+      "target": "src_files_filelimits"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:21",
+      "weight": 1.0,
+      "source": "claude_filepile_architecture",
+      "target": "src_files_generatefileid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_files_generatefileid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:28",
+      "weight": 1.0,
+      "source": "src_index_upload_handler",
+      "target": "src_files_generatefileid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_index_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_index_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_index_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_index_upload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_sql",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_sql_execute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_sql_fetchall",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_sql_fetchfirst",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "src_sql_initdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:20",
+      "weight": 1.0,
+      "source": "claude_filepile_architecture",
+      "target": "src_index_app"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:14",
+      "weight": 1.0,
+      "source": "src_index_app",
+      "target": "src_sql_initdb"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:28-30",
+      "weight": 1.0,
+      "source": "claude_two_db_connections",
+      "target": "src_index_db"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:24-26",
+      "weight": 1.0,
+      "source": "claude_file_expiry_caveat",
+      "target": "src_index_cleanup"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "readme.md",
+      "source_location": "readme.md:12",
+      "weight": 1.0,
+      "source": "readme_features",
+      "target": "src_index_cleanup"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_index_cleanup",
+      "target": "src_sql_execute"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:147",
+      "weight": 1.0,
+      "source": "src_index_cleanup",
+      "target": "src_sql_files_table"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:45",
+      "weight": 1.0,
+      "source": "src_index_upload_handler",
+      "target": "src_index_cleanup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_package",
+      "target": "src_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_package_scripts",
+      "target": "src_package_scripts_production",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_package_scripts",
+      "target": "src_package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_package_dependencies",
+      "target": "src_package_dependencies_express",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_package_dependencies",
+      "target": "src_package_dependencies_multer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_package_dependencies",
+      "target": "src_package_dependencies_nodemon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_package_dependencies",
+      "target": "src_package_dependencies_sqlite3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sql.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_sql",
+      "target": "src_sql_execute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sql.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_sql",
+      "target": "src_sql_fetchall",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sql.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_sql",
+      "target": "src_sql_fetchfirst",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sql.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_sql",
+      "target": "src_sql_initdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sql.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_sql",
+      "target": "src_sql_updatestatistics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:80",
+      "weight": 1.0,
+      "source": "src_index_download_handler",
+      "target": "src_sql_execute"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:37",
+      "weight": 1.0,
+      "source": "src_index_upload_handler",
+      "target": "src_sql_execute"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sql.js",
+      "source_location": "src/sql.js:68-70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_sql_initdb",
+      "target": "src_sql_execute"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:123",
+      "weight": 1.0,
+      "source": "src_index_statistics_handler",
+      "target": "src_sql_fetchall"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/sql.js",
+      "source_location": "src/sql.js:20-36",
+      "weight": 1.0,
+      "source": "src_sql_fetchfirst",
+      "target": "src_sql_fetchall"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:65",
+      "weight": 1.0,
+      "source": "src_index_download_handler",
+      "target": "src_sql_fetchfirst"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:98",
+      "weight": 1.0,
+      "source": "src_index_info_handler",
+      "target": "src_sql_fetchfirst"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:34",
+      "weight": 1.0,
+      "source": "claude_statistics_quirks",
+      "target": "src_sql_updatestatistics"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sql.js",
+      "source_location": "src/sql.js:39-41",
+      "weight": 1.0,
+      "source": "src_sql_updatestatistics",
+      "target": "src_sql_statistics_table"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:22",
+      "weight": 1.0,
+      "source": "claude_filepile_architecture",
+      "target": "src_sql_initdb"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:28-30",
+      "weight": 1.0,
+      "source": "claude_two_db_connections",
+      "target": "src_sql_initdb"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sql.js",
+      "source_location": "src/sql.js:48-55",
+      "weight": 1.0,
+      "source": "src_sql_initdb",
+      "target": "src_sql_files_table"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/sql.js",
+      "source_location": "src/sql.js:57-61",
+      "weight": 1.0,
+      "source": "src_sql_initdb",
+      "target": "src_sql_statistics_table"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:24-26",
+      "weight": 1.0,
+      "source": "claude_file_expiry_caveat",
+      "target": "src_index_upload_handler"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "readme.md",
+      "source_location": "readme.md:45-47",
+      "weight": 1.0,
+      "source": "readme_endpoints",
+      "target": "src_index_upload_handler"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:35",
+      "weight": 1.0,
+      "source": "src_index_upload_handler",
+      "target": "src_sql_files_table"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:39-42",
+      "weight": 1.0,
+      "source": "src_index_upload_handler",
+      "target": "src_sql_statistics_table"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "readme.md",
+      "source_location": "readme.md:54-55",
+      "weight": 1.0,
+      "source": "readme_endpoints",
+      "target": "src_index_download_handler"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:63",
+      "weight": 1.0,
+      "source": "src_index_download_handler",
+      "target": "src_sql_files_table"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:75-78",
+      "weight": 1.0,
+      "source": "src_index_download_handler",
+      "target": "src_sql_statistics_table"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "CLAUDE.md:36",
+      "weight": 1.0,
+      "source": "claude_statistics_quirks",
+      "target": "src_index_info_handler"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "readme.md",
+      "source_location": "readme.md:48-53",
+      "weight": 1.0,
+      "source": "readme_endpoints",
+      "target": "src_index_info_handler"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:96",
+      "weight": 1.0,
+      "source": "src_index_info_handler",
+      "target": "src_sql_files_table"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "readme.md",
+      "source_location": "readme.md:56-60",
+      "weight": 1.0,
+      "source": "readme_endpoints",
+      "target": "src_index_statistics_handler"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/index.js",
+      "source_location": "src/index.js:123",
+      "weight": 1.0,
+      "source": "src_index_statistics_handler",
+      "target": "src_sql_statistics_table"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "readme.md",
+      "source_location": "readme.md:67",
+      "weight": 1.0,
+      "source": "readme_filepile",
+      "target": "src_package_filepile"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "readme.md",
+      "source_location": "readme.md:62-63",
+      "weight": 1.0,
+      "source": "readme_inspiration",
+      "target": "readme_filepile"
+    },
+    {
+      "relation": "represents",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_logo",
+      "target": "assets_filepile_brand_identity"
+    },
+    {
+      "relation": "uses_style",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_logo",
+      "target": "assets_filepile_cartoon_style"
+    },
+    {
+      "relation": "represents",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_logo",
+      "target": "assets_filepile_concept_organization"
+    },
+    {
+      "relation": "symbolizes",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_logo",
+      "target": "assets_filepile_concept_pile"
+    },
+    {
+      "relation": "depicts",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_logo",
+      "target": "assets_filepile_stack_of_books"
+    },
+    {
+      "relation": "depicts",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_logo",
+      "target": "assets_filepile_stacked_books"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_stacked_books",
+      "target": "assets_filepile_color_palette"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Filepile.jpg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_stacked_books",
+      "target": "assets_filepile_star_motif"
+    },
+    {
+      "relation": "symbolizes",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_stack_of_books",
+      "target": "assets_filepile_file_organization_metaphor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_stack_of_books",
+      "target": "assets_filepile_star_marker"
+    },
+    {
+      "relation": "adds_accent_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_star_marker",
+      "target": "assets_filepile_brand_identity"
+    },
+    {
+      "relation": "conveys",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "assets/Filepile.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "assets_filepile_brand_identity",
+      "target": "assets_filepile_file_organization_metaphor"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "upload_flow",
+      "label": "File upload flow",
+      "nodes": [
+        "src_index_upload_handler",
+        "src_files_generatefileid",
+        "src_files_storage",
+        "src_sql_execute",
+        "src_sql_files_table",
+        "src_index_cleanup"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/index.js"
+    },
+    {
+      "id": "statistics_tracking",
+      "label": "Statistics tracking pattern",
+      "nodes": [
+        "src_index_upload_handler",
+        "src_index_download_handler",
+        "src_index_statistics_handler",
+        "src_sql_statistics_table"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/index.js"
+    },
+    {
+      "id": "expiry_mechanism",
+      "label": "In-memory expiry mechanism",
+      "nodes": [
+        "src_index_upload_handler",
+        "src_index_cleanup",
+        "claude_file_expiry_caveat"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md"
+    }
+  ],
+  "built_at_commit": "6fff158ec5e272c154a387bdc259170b74b2b5d6"
+}

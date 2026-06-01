@@ -1,0 +1,42 @@
+{
+  "/Users/wvh/Git/Filepile/src/files.js": {
+    "mtime": 1780336145.2244227,
+    "ast_hash": "22331493d742a49c0bc6611ae1b8af98",
+    "semantic_hash": "22331493d742a49c0bc6611ae1b8af98"
+  },
+  "/Users/wvh/Git/Filepile/src/index.js": {
+    "mtime": 1780336145.2244856,
+    "ast_hash": "567d15ff52998b648c83e7a53a906d8c",
+    "semantic_hash": "567d15ff52998b648c83e7a53a906d8c"
+  },
+  "/Users/wvh/Git/Filepile/src/package.json": {
+    "mtime": 1780336145.3746276,
+    "ast_hash": "81e9ac941cfbff451ea3d30da24f79d6",
+    "semantic_hash": "81e9ac941cfbff451ea3d30da24f79d6"
+  },
+  "/Users/wvh/Git/Filepile/src/sql.js": {
+    "mtime": 1780336145.3747048,
+    "ast_hash": "245d9d684c729b5c585b153f42599482",
+    "semantic_hash": "245d9d684c729b5c585b153f42599482"
+  },
+  "/Users/wvh/Git/Filepile/CLAUDE.md": {
+    "mtime": 1780336233.090992,
+    "ast_hash": "6272cf0c65f01f998dca432736ad48ef",
+    "semantic_hash": "6272cf0c65f01f998dca432736ad48ef"
+  },
+  "/Users/wvh/Git/Filepile/readme.md": {
+    "mtime": 1780336145.2243395,
+    "ast_hash": "b76338b7b5b9d84ee51ffa6123b17e52",
+    "semantic_hash": "b76338b7b5b9d84ee51ffa6123b17e52"
+  },
+  "/Users/wvh/Git/Filepile/assets/Filepile.jpg": {
+    "mtime": 1780336145.2238593,
+    "ast_hash": "911dc5f911ae41fe0c1c839202e45383",
+    "semantic_hash": "911dc5f911ae41fe0c1c839202e45383"
+  },
+  "/Users/wvh/Git/Filepile/assets/Filepile.png": {
+    "mtime": 1780336145.2242522,
+    "ast_hash": "5cb8a5eeb85e8e3cdcd1d69cf4b29051",
+    "semantic_hash": "5cb8a5eeb85e8e3cdcd1d69cf4b29051"
+  }
+}

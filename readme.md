@@ -11,52 +11,56 @@
 - short term storage for quickly sharing files
 - expiring files that are _actually_ deleted (default 10min)
 - easy-to-share links
-- usable from a cli
+- usable from a cli **or** from the web UI
 
-## Usage
-FilePile can be used from the command line with curl or from scripts and other applications. Here I go over the basic usage with curl.
+## Web UI
+Open `http://hostname:3000/` in any browser. Drag a file onto the drop zone, watch the progress bar fill, and copy the share link from the result card. The same page exposes lookup and live statistics.
+
+## CLI usage
+FilePile can also be used from the command line with curl or from scripts. The API lives under `/api/`.
+
 ### Uploading a file
 ````
 curl -X POST \
     -F "file=@</path/to/file>" \
-    http://hostname:3000/upload
+    http://hostname:3000/api/upload
 ````
 ### Getting file info
 ````
 curl -X GET \
-    http://hostname:3000/info/<file id>
+    http://hostname:3000/api/info/<file id>
 ````
 ### Downloading a file
 ````
 curl -X GET \
-    http://hostname:3000/download/<file id> \
+    http://hostname:3000/api/download/<file id> \
     --output <file>
 ````
 ### Checking statistics
 ````
 curl -X GET \
-    http://hostname:3000/statistics
+    http://hostname:3000/api/statistics
 ````
 
 > [!NOTE]
-> The server will always respond with JSON. 
+> The API always responds with JSON (except `/api/download`, which streams the file).
 
 ## Endpoints
-- POST: `/upload`
+- POST: `/api/upload`
     - upload a file.
     - returns with the file id needed for other functionality and sharing.
-- GET: `/info/<file id>`
+- GET: `/api/info/<file id>`
     - returns information about the file.
         - filename
         - size of file (in bytes)
         - time of upload
-        - time till expiry
-- GET: `/download/<file id>`
-    - returns the actual file.
-- GET: `/statistics`
-    - reutrns useful (or at least cool) statistics about this instance.
+        - time till expiry (in milliseconds)
+- GET: `/api/download/<file id>`
+    - returns the actual file with its original filename.
+- GET: `/api/statistics`
+    - returns useful (or at least cool) statistics about this instance.
         - files uploaded
-        - files downloaded 
+        - files downloaded
         - megabytes downloaded
 
 ## Inspiration
@@ -64,7 +68,8 @@ I am cautious of relying on random seemingly good-willing file hosts on the inte
 
 ## Installation
 - Clone the repo
-- run `npm run production` in the `/src` folder
+- `cd src && npm install`
+- `npm run build && npm start`
 
 ## Development
-Feel free to contribute. Use `npm start` for the development server.
+Feel free to contribute. Run `npm run dev` in `/src` for the Next.js dev server.
